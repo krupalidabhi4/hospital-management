@@ -44,10 +44,10 @@
                                         <td>{{ ucfirst($patient->gender) }}</td>
                                         <td>
                                             <div class="btn-group" role="group">
-                                                <a href="{{ route('patients.show', $patient) }}" class="btn btn-sm btn-info">
+                                                <a href="{{ route('patients.show', $patient) }}" class="btn btn-sm btn-info mr-2">
                                                     <i class="fas fa-eye"></i>
                                                 </a>
-                                                <a href="{{ route('patients.edit', $patient) }}" class="btn btn-sm btn-warning">
+                                                <a href="{{ route('patients.edit', $patient) }}" class="btn btn-sm btn-warning mr-2">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
                                                 <form action="{{ route('patients.destroy', $patient) }}" method="POST" style="display: inline;">
