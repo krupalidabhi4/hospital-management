@@ -43,7 +43,7 @@
                                         <td>{{ $patient->date_of_birth->format('M d, Y') }}</td>
                                         <td>{{ ucfirst($patient->gender) }}</td>
                                         <td>
-                                            <div class="btn-group" role="group">
+                                            <div class="btn-group d-block" role="group">
                                                 <a href="{{ route('patients.show', $patient) }}" class="btn btn-sm btn-info mr-2">
                                                     <i class="fas fa-eye"></i>
                                                 </a>
