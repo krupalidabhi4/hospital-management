@@ -34,6 +34,7 @@
                                 </tr>
                             </thead>
                             <tbody>
+
                                 @forelse($patients as $patient)
                                     <tr>
                                         <td>{{ $patient->id }}</td>
