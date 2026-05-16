@@ -15,7 +15,7 @@ jobs:
 
         with:
           host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
+          username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
 
           script: |
@@ -25,7 +25,7 @@ jobs:
 
             composer install --no-dev --optimize-autoloader
 
-            npm install
+            npm ci
             npm run build
 
             php artisan migrate --force
