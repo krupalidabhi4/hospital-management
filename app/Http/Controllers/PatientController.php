@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\ProcessDataJob;
 use Illuminate\Http\Request;
 use App\Models\Patient;
 
@@ -48,7 +49,7 @@ class PatientController extends Controller
         ]);
 
         Patient::create($request->all());
-
+        ProcessDataJob::dispatch('storePatience');
         return redirect()->route('patients.index')
             ->with('success', 'Patient created successfully.');
     }
